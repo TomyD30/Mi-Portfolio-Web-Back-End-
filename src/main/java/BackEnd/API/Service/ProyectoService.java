@@ -23,4 +23,19 @@ public class ProyectoService {
     public List<Proyecto> traer(){
         return proyRepo.findAll();
     }
+    
+    public Proyecto traerPorId(Integer id){
+        return proyRepo.findById(id).orElse(null);
+    }
+    
+    public void guardar(Proyecto proy){
+        proyRepo.save(proy);
+    }
+    
+    public void editar(Proyecto proy, String nuevoNombre, String nuevoPeriodo, String nuevaDescripcion){
+        proy.setNombre(nuevoNombre);
+        proy.setPeriodo(nuevoPeriodo);
+        proy.setDescripcion(nuevaDescripcion);
+    }
+    
 }

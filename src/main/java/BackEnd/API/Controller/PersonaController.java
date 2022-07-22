@@ -25,22 +25,6 @@ public class PersonaController {
     
     @Autowired
     private PersonaService persoSrv;
-    @Autowired
-    private EducacionService educSrv;
-    @Autowired
-    private EmpresaService empSrv;
-    @Autowired
-    private ExperienciaLaboralService expLabSrv;
-    @Autowired
-    private HabilidadService habSrv;
-    @Autowired
-    private InstitutoService insSrv;
-    @Autowired
-    private LinkService linkSrv;
-    @Autowired
-    private ProyectoService proySrv;
-    @Autowired
-    private RedSocialService rsSrv;
     
     @GetMapping("/personas/traer/{id}")
     public Persona traerPersona(@PathVariable Integer id){
