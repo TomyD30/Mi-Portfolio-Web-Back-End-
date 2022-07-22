@@ -51,5 +51,7 @@ public class Persona implements IEntity{
     private List<Proyecto> proyectos;
     @OneToMany(mappedBy="persona")
     private List<RedSocial> redesSociales;
+    @OneToMany(mappedBy="persona")
+    private List<Habilidad> habilidades;
     
 }
