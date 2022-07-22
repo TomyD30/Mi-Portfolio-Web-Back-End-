@@ -22,20 +22,20 @@ import lombok.Setter;
 @Getter 
 @Setter
 @Entity
-public class Educacion {
+public class Link {
     @Id
     private Integer id;
     
-    @Column(columnDefinition="VARCHAR(200)")
+    @Column(columnDefinition="VARCHAR(45)")
     private String nombre;
     
-    @Column(columnDefinition="VARCHAR(45)")
-    private String periodo;
+    @Column(columnDefinition="VARCHAR(100)")
+    private String url;
+    
+    @Column(columnDefinition="VARCHAR(100)")
+    private String imagen;
     
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="persona_id")
-    @JsonIgnore private Persona persona;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="insituto_id")
-    private Instituto instituto;
+    @JoinColumn(name="proyecto_id")
+    @JsonIgnore private Proyecto proyecto;
 }

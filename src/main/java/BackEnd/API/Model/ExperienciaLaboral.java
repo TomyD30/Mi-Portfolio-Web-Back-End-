@@ -22,20 +22,23 @@ import lombok.Setter;
 @Getter 
 @Setter
 @Entity
-public class Educacion {
+public class ExperienciaLaboral {
     @Id
     private Integer id;
     
-    @Column(columnDefinition="VARCHAR(200)")
+    @Column(columnDefinition="VARCHAR(75)")
     private String nombre;
     
     @Column(columnDefinition="VARCHAR(45)")
     private String periodo;
     
+    @Column(columnDefinition="VARCHAR(1000)")
+    private String descripcion;
+    
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="persona_id")
     @JsonIgnore private Persona persona;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="insituto_id")
-    private Instituto instituto;
+    @JoinColumn(name="empresa_id")
+    private Empresa empresa;
 }

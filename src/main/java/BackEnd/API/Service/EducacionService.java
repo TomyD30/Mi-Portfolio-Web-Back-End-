@@ -4,9 +4,8 @@
  */
 package BackEnd.API.Service;
 
-import BackEnd.API.Model.IEntity;
-import BackEnd.API.Model.Persona;
-import BackEnd.API.Repository.PersonaRepository;
+import BackEnd.API.Model.Educacion;
+import BackEnd.API.Repository.EducacionRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,17 +14,15 @@ import org.springframework.stereotype.Service;
  *
  * @author User
  */
+
 @Service
-public class PersonaService{
+public class EducacionService {
     
     @Autowired
-    PersonaRepository persoRepo;
-
-    public List<Persona> traer() {
-        return persoRepo.findAll();
+    EducacionRepository educRepository;
+    
+    public List<Educacion> traer(){
+        return educRepository.findAll();
     }
     
-    public Persona traerPorId(Integer id){
-        return persoRepo.findById(id).orElse(null);
-    }
 }
