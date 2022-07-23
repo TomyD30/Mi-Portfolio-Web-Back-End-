@@ -28,7 +28,7 @@ import lombok.Setter;
 @Entity
 public class Proyecto implements IEntidadSecundaria{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
     
     @Column(columnDefinition="VARCHAR(45)")
