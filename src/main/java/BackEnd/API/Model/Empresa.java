@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity
 public class Empresa {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     @Column(columnDefinition="VARCHAR(45)")

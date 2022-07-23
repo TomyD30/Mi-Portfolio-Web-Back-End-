@@ -4,13 +4,11 @@
  */
 package BackEnd.API.Model;
 
-import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,7 +22,7 @@ import lombok.Setter;
 @Entity
 public class Instituto {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     @Column(columnDefinition="VARCHAR(45)")

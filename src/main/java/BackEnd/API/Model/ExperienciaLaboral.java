@@ -26,7 +26,7 @@ import lombok.Setter;
 @Entity
 public class ExperienciaLaboral implements IEntidadSecundaria {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     @Column(columnDefinition="VARCHAR(75)")
