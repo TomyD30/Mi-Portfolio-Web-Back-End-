@@ -7,7 +7,6 @@ package BackEnd.API.Model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +21,7 @@ import lombok.Setter;
 @Entity
 public class Instituto {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
     
     @Column(columnDefinition="VARCHAR(45)")
