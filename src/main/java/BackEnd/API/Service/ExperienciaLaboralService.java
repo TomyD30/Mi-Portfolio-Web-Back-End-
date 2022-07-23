@@ -6,8 +6,6 @@ package BackEnd.API.Service;
 
 import BackEnd.API.Model.ExperienciaLaboral;
 import BackEnd.API.Repository.ExperienciaLaboralRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,11 +14,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class ExperienciaLaboralService {
-    @Autowired
-    ExperienciaLaboralRepository expLaboRepository;
-    
-    public List<ExperienciaLaboral> traer(){
-        return expLaboRepository.findAll();
-    }
+public class ExperienciaLaboralService extends ServicioBasico<ExperienciaLaboral,ExperienciaLaboralRepository>{
 }

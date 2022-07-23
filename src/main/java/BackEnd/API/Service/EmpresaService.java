@@ -6,8 +6,6 @@ package BackEnd.API.Service;
 
 import BackEnd.API.Model.Empresa;
 import BackEnd.API.Repository.EmpresaRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,11 +14,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class EmpresaService {
-    @Autowired
-    EmpresaRepository empRepository;
-    
-    public List<Empresa> traer(){
-        return empRepository.findAll();
-    }
+public class EmpresaService extends ServicioBasico<Empresa,EmpresaRepository>{
 }

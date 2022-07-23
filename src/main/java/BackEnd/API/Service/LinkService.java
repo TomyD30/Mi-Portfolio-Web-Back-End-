@@ -16,11 +16,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class LinkService {
-   @Autowired
-   LinkRepository linkRepo;
-   
-   public List<Link> traer(){
-       return linkRepo.findAll();
-   }
+public class LinkService extends ServicioBasico<Link,LinkRepository>{
 }

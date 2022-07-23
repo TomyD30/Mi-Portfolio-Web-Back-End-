@@ -6,8 +6,6 @@ package BackEnd.API.Service;
 
 import BackEnd.API.Model.Habilidad;
 import BackEnd.API.Repository.HabilidadRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,11 +14,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class HabilidadService {
-    @Autowired
-    HabilidadRepository habRepo;
-    
-    public List<Habilidad> traer(){
-        return habRepo.findAll();
-    }
+public class HabilidadService extends ServicioBasico<Habilidad,HabilidadRepository>{
 }

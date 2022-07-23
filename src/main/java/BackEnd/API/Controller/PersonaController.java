@@ -31,11 +31,6 @@ public class PersonaController {
         return persoSrv.traerPorId(id);
     }
     
-    @GetMapping("/test")
-    public String test(){
-        return persoSrv.traerPorId(1).getProyectos().get(1).getNombre();
-    }
-    
 //    @GetMapping("/personas/traer/{id}")
 //    public PersonaDTO traerPersona(@PathVariable Integer id){
 //        PersonaDTO persoDTO = new PersonaDTO();

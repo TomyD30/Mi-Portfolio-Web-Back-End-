@@ -4,7 +4,6 @@
  */
 package BackEnd.API.Service;
 
-import BackEnd.API.Model.IEntity;
 import BackEnd.API.Model.Persona;
 import BackEnd.API.Repository.PersonaRepository;
 import java.util.List;

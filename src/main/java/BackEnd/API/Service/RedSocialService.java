@@ -6,8 +6,6 @@ package BackEnd.API.Service;
 
 import BackEnd.API.Model.RedSocial;
 import BackEnd.API.Repository.RedSocialRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,11 +14,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class RedSocialService {
-    @Autowired
-    RedSocialRepository redSocRepo;
-    
-    public List<RedSocial> traer(){
-        return redSocRepo.findAll();
-    }
+public class RedSocialService extends ServicioBasico<RedSocial,RedSocialRepository>{
 }

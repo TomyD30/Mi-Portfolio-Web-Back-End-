@@ -6,8 +6,6 @@ package BackEnd.API.Service;
 
 import BackEnd.API.Model.Instituto;
 import BackEnd.API.Repository.InstitutoRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,11 +14,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class InstitutoService {
-    @Autowired
-    InstitutoRepository instRepo;
-    
-    public List<Instituto> traer(){
-        return instRepo.findAll();
-    }
+public class InstitutoService extends ServicioBasico<Instituto,InstitutoRepository>{
 }

@@ -9,6 +9,8 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -24,8 +26,9 @@ import lombok.Setter;
 @Getter 
 @Setter
 @Entity
-public class Proyecto {
+public class Proyecto implements IEntidadSecundaria{
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     
     @Column(columnDefinition="VARCHAR(45)")
@@ -42,4 +45,5 @@ public class Proyecto {
     @JsonIgnore private Persona persona;
     @OneToMany(mappedBy="proyecto")
     private List<Link> links;
+    
 }

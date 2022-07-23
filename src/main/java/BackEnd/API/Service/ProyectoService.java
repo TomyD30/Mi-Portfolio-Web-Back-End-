@@ -4,6 +4,7 @@
  */
 package BackEnd.API.Service;
 
+import BackEnd.API.Model.Link;
 import BackEnd.API.Model.Proyecto;
 import BackEnd.API.Repository.ProyectoRepository;
 import java.util.List;
@@ -16,26 +17,29 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class ProyectoService {
-    @Autowired
-    ProyectoRepository proyRepo;
+public class ProyectoService extends ServicioBasico<Proyecto , ProyectoRepository>{
     
-    public List<Proyecto> traer(){
-        return proyRepo.findAll();
-    }
+//    public List<Proyecto> traer(){
+//        return proyRepo.findAll();
+//    }
+//    
+//    public Proyecto traerPorId(Integer id){
+//        return proyRepo.findById(id).orElse(null);
+//    }
+//    
+//    public void guardar(Proyecto proy){
+//        proyRepo.save(proy);
+//    }
+//    
+//    public void borrar(Integer id){
+//        proyRepo.deleteById(id);
+//    }
     
-    public Proyecto traerPorId(Integer id){
-        return proyRepo.findById(id).orElse(null);
-    }
-    
-    public void guardar(Proyecto proy){
-        proyRepo.save(proy);
-    }
-    
-    public void editar(Proyecto proy, String nuevoNombre, String nuevoPeriodo, String nuevaDescripcion){
-        proy.setNombre(nuevoNombre);
-        proy.setPeriodo(nuevoPeriodo);
-        proy.setDescripcion(nuevaDescripcion);
-    }
+//    public void editar(Proyecto proy, String nuevoNombre, String nuevoPeriodo, String nuevaDescripcion , List<Link> links){
+//        proy.setNombre(nuevoNombre);
+//        proy.setPeriodo(nuevoPeriodo);
+//        proy.setDescripcion(nuevaDescripcion);
+//        proy.setLinks(links);
+//    }
     
 }

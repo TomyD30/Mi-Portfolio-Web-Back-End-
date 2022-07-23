@@ -6,8 +6,6 @@ package BackEnd.API.Service;
 
 import BackEnd.API.Model.Educacion;
 import BackEnd.API.Repository.EducacionRepository;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,13 +14,5 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class EducacionService {
-    
-    @Autowired
-    EducacionRepository educRepository;
-    
-    public List<Educacion> traer(){
-        return educRepository.findAll();
-    }
-    
+public class EducacionService extends ServicioBasico<Educacion,EducacionRepository>{
 }
