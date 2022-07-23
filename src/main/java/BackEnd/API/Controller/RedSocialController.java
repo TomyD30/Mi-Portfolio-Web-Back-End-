@@ -6,6 +6,7 @@ package BackEnd.API.Controller;
 
 import BackEnd.API.Model.RedSocial;
 import BackEnd.API.Service.RedSocialService;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -29,7 +30,7 @@ public class RedSocialController extends ControladorSecundario<RedSocial, RedSoc
        return super.guardar(persona_id, rs);
     }
     
-    @PutMapping("redes-sociales/eliminar/{id}")
+    @DeleteMapping("redes-sociales/eliminar/{id}")
     @Override
     public void borrar(@PathVariable Integer id){
         super.borrar(id);

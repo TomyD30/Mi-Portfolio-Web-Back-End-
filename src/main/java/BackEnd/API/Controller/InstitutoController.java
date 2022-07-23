@@ -6,6 +6,7 @@ package BackEnd.API.Controller;
 
 import BackEnd.API.Model.Instituto;
 import BackEnd.API.Service.InstitutoService;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -29,7 +30,7 @@ public class InstitutoController extends ControladorPrimario<Instituto, Institut
         return super.guardar(ins);
     }
     
-    @PutMapping("institutos/eliminar/{id}")
+    @DeleteMapping("institutos/eliminar/{id}")
     @Override
     public void borrar(@PathVariable Integer id){
         super.borrar(id);

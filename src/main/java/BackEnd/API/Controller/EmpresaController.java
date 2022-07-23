@@ -7,6 +7,7 @@ package BackEnd.API.Controller;
 import BackEnd.API.Model.Empresa;
 import BackEnd.API.Service.EmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -30,7 +31,7 @@ public class EmpresaController extends ControladorPrimario<Empresa, EmpresaServi
         return super.guardar(emp);
     }
     
-    @PutMapping("empresas/eliminar/{id}")
+    @DeleteMapping("empresas/eliminar/{id}")
     @Override
     public void borrar(@PathVariable Integer id){
         super.borrar(id);

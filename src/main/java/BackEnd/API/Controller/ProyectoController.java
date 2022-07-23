@@ -5,14 +5,12 @@
 package BackEnd.API.Controller;
 
 import BackEnd.API.Model.Proyecto;
-import BackEnd.API.Service.PersonaService;
 import BackEnd.API.Service.ProyectoService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -35,7 +33,7 @@ public class ProyectoController extends ControladorSecundario<Proyecto, Proyecto
        return super.guardar(persona_id, proy);
     }
     
-    @PutMapping("proyectos/eliminar/{id}")
+    @DeleteMapping("proyectos/eliminar/{id}")
     @Override
     public void borrar(@PathVariable Integer id){
         super.borrar(id);

@@ -6,6 +6,7 @@ package BackEnd.API.Controller;
 
 import BackEnd.API.Model.Habilidad;
 import BackEnd.API.Service.HabilidadService;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -29,7 +30,7 @@ public class HabilidadController extends ControladorSecundario<Habilidad, Habili
        return super.guardar(persona_id, hab);
     }
     
-    @PutMapping("habilidades/eliminar/{id}")
+    @DeleteMapping("habilidades/eliminar/{id}")
     @Override
     public void borrar(@PathVariable Integer id){
         super.borrar(id);

@@ -8,6 +8,7 @@ import BackEnd.API.Model.Link;
 import BackEnd.API.Service.LinkService;
 import BackEnd.API.Service.ProyectoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -37,7 +38,7 @@ public class LinkController{
         return link;
     }
     
-    @PutMapping("links/eliminar/{id}")
+    @DeleteMapping("links/eliminar/{id}")
     public void borrar(@PathVariable Integer id){
         linkSrv.borrar(id);
     }
