@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  *
  * @author User
  */
+@RestController
 public class HabilidadController extends ControladorSecundario<Habilidad, HabilidadService>{
     
     @PostMapping("personas/{persona_id}/habilidaeds/crear")
