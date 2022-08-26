@@ -4,10 +4,11 @@
  */
 package BackEnd.API.Model;
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,27 +20,38 @@ import lombok.Setter;
 @Getter 
 @Setter
 @Entity
-@Table(name="Persona")
-public class Persona {
+public class Persona{
     @Id
-    @Column(name="ID")
-    private Long id;
+    private Integer id;
     
-    @Column(name="Nombre")
+    @Column(columnDefinition="VARCHAR(45)")
     private String nombre;
     
-    @Column(name="Apellido")
+    @Column(columnDefinition="VARCHAR(45)")
     private String apellido;
     
-    @Column(name="Correo")
+    @Column(columnDefinition="VARCHAR(60)")
     private String correo;
     
-    @Column(name="Sobre_mi")
+    @Column(columnDefinition="VARCHAR(1000)")
     private String sobreMi;
     
-    @Column(name="Foto_de_perfil")
+    @Column(columnDefinition="VARCHAR(100)")
     private String fotoDePerfil;
     
-    @Column(name="Titulo_profesional")
+    @Column(columnDefinition="VARCHAR(45)")
     private String tituloProfesional;
+    
+    //Relaciones
+    @OneToMany(mappedBy="persona")
+    private List<ExperienciaLaboral> experienciasLaborales;
+    @OneToMany(mappedBy="persona")
+    private List<Educacion> educaciones;
+    @OneToMany(mappedBy="persona")
+    private List<Proyecto> proyectos;
+    @OneToMany(mappedBy="persona")
+    private List<RedSocial> redesSociales;
+    @OneToMany(mappedBy="persona")
+    private List<Habilidad> habilidades;
+    
 }

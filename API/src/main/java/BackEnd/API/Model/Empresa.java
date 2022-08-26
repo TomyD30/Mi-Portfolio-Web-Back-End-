@@ -4,14 +4,10 @@
  */
 package BackEnd.API.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,21 +19,14 @@ import lombok.Setter;
 @Getter 
 @Setter
 @Entity
-public class Educacion implements IEntidadSecundaria {
+public class Empresa {
     @Id
     @GeneratedValue
     private Integer id;
     
-    @Column(columnDefinition="VARCHAR(200)")
+    @Column(columnDefinition="VARCHAR(45)")
     private String nombre;
     
-    @Column(columnDefinition="VARCHAR(45)")
-    private String periodo;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="persona_id")
-    @JsonIgnore private Persona persona;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="insituto_id")
-    private Instituto instituto;
+    @Column(columnDefinition="VARCHAR(100)")
+    private String logo;
 }

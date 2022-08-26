@@ -4,7 +4,7 @@
  */
 package BackEnd.API.Repository;
 
-import BackEnd.API.Model.Persona;
+import BackEnd.API.Model.Educacion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface PersonaRepository extends JpaRepository<Persona, Integer>{
+public interface EducacionRepository extends JpaRepository<Educacion,Integer> {
     
 }
