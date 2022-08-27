@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author User
  */
+@RestController
 public class ExperienciaLaboralController extends ControladorSecundario<ExperienciaLaboral, ExperienciaLaboralService> {
     
     @PostMapping("personas/{persona_id}/experiencias-laborales/crear")
