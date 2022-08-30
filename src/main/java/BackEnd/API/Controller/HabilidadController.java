@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HabilidadController extends ControladorSecundario<Habilidad, HabilidadService>{
     
-    @PostMapping("personas/{persona_id}/habilidaeds/crear")
+    @PostMapping("personas/{persona_id}/habilidades/crear")
     @Override
     public void crear(@PathVariable Integer persona_id, @RequestBody Habilidad hab){
         super.crear(persona_id, hab);
